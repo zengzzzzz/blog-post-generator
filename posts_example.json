@@ -1,0 +1,38 @@
+[
+    {
+        "Id": 14593778,
+        "Title": "osi七层模型与tcp/ip四层模型的差别",
+        "DateAdded": "2021-03-29T18:58:00",
+        "SourceUrl": null,
+        "PostType": "BlogPost",
+        "Body": "<p>OSI 七层协议</p>\n<ul>\n<li style=\"text-align: left;\">应用层</li>\n<li style=\"text-align: left;\">表示层</li>\n<li style=\"text-align: left;\">会话层</li>\n<li style=\"text-align: left;\">运输层</li>\n<li style=\"text-align: left;\">网络层</li>\n<li style=\"text-align: left;\">数据链路层</li>\n<li style=\"text-align: left;\">物理层</li>\n</ul>\n<p style=\"text-align: left;\">TCP/IP 四层协议</p>\n<ul>\n<li style=\"text-align: left;\">应用层</li>\n<li style=\"text-align: left;\">运输层</li>\n<li style=\"text-align: left;\">网际层</li>\n<li style=\"text-align: left;\">网络接口层</li>\n</ul>\n<p style=\"text-align: left;\">五层协议：</p>\n<ul>\n<li style=\"text-align: left;\">应用层 为用户的应用进程提供服务 HTTP SMTP FTP 协议</li>\n<li style=\"text-align: left;\">运输层 俩个主机进程之间的通信提供服务 TCP UDP</li>\n<li style=\"text-align: left;\">网络层 为分组交换网上的不同主机提供通信服务</li>\n<li style=\"text-align: left;\">数据链路层 主机间的数据是一段段在链路上传送的 相邻结点之间的数据是直接传送的</li>\n<li style=\"text-align: left;\">物理层 透明的传送比特流</li>\n</ul>\n<p>&nbsp; OSI七层协议概念清晰，理论完整，复杂又不实用。tcp/ip 是四层，方便学习采用五层。</p>\n<p>&nbsp;</p>",
+        "BlogId": 675427,
+        "Description": "",
+        "DateUpdated": "2021-03-29T18:58:00",
+        "IsMarkdown": false,
+        "EntryName": null,
+        "CreatedTime": "2021-03-29T18:57:44.267",
+        "IsActive": true,
+        "AutoDesc": "OSI 七层协议 应用层 表示层 会话层 运输层 网络层 数据链路层 物理层 TCP/IP 四层协议 应用层 运输层 网际层 网络接口层 五层协议： 应用层 为用户的应用进程提供服务 HTTP SMTP FTP 协议 运输层 俩个主机进程之间的通信提供服务 TCP UDP 网络层 为分组交换网上的不",
+        "AccessPermission": "Anonymous",
+        "DomainEvents": null
+    },
+    {
+        "Id": 14594562,
+        "Title": "不同主机之间数据包的传输过程",
+        "DateAdded": "2021-03-29T21:57:00",
+        "SourceUrl": null,
+        "PostType": "BlogPost",
+        "Body": "<h4>同一广播域内，两台主机通信过程</h4>",
+        "BlogId": 675427,
+        "Description": "",
+        "DateUpdated": "2021-03-29T21:57:00",
+        "IsMarkdown": false,
+        "EntryName": null,
+        "CreatedTime": "2021-03-29T21:57:22.31",
+        "IsActive": true,
+        "AutoDesc": " ",
+        "AccessPermission": "Anonymous",
+        "DomainEvents": null
+    }
+]
