@@ -61,3 +61,71 @@ This script automates the process of converting blog post data from a JSON file 
 
 This project is licensed under the  Apache-2.0 License. 
 
+# 博客文章格式转换（json to markdown）
+
+这个脚本自动将 JSON 文件中的博客文章数据转换为适用于基于 Jekyll 的博客的独立 Markdown 文件。它从 JSON 文件中提取博客文章的标题、内容和日期等关键信息，并在 `markdown_files` 目录中生成 Markdown 文件。
+
+## 特点
+
+- 将 JSON 博客文章数据转换为 Markdown 文件。
+- 保留博客文章内容中的换行。
+- 自动为 Jekyll 生成前置信息。
+
+## 使用方法
+
+1. **前提条件：**
+
+   确保您的系统已安装 Python。
+
+2. **克隆仓库：**
+
+   ```
+   bash
+   git clone https://github.com/your-username/blog-post-generator.git 
+   ```
+
+3. **进入项目目录：**
+
+   ```
+   bash
+   cd blog-post-generator
+   ```
+
+4. **提供博客文章数据：**
+
+   将您的博客文章数据放置在名为 `posts_example.json` 的文件中。JSON 文件应具有以下结构：
+
+   ```
+   json
+   [
+       {
+           "Title": "示例博客文章",
+           "Body": "这是博客文章的内容...",
+           "DateAdded": "2023-08-28T10:00:00"
+       },
+       // 添加更多博客文章...
+   ]
+   ```
+
+5. **运行脚本：**
+
+   ```
+   bash
+   python generate_posts.py
+   ```
+
+   这将在 `markdown_files` 目录中为每篇博客文章生成独立的 Markdown 文件。
+
+6. **访问生成的 Markdown 文件：**
+
+   脚本执行完毕后，您将在 `markdown_files` 目录中找到生成的 Markdown 文件。
+
+## 要求
+
+- Python（版本 >= 3.8）
+
+## 许可证
+
+该项目基于 Apache-2.0 许可证。
+
+
