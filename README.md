@@ -59,5 +59,5 @@ This script automates the process of converting blog post data from a JSON file 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/LICENSE) file for details.
+This project is licensed under the  Apache-2.0 License. 
 
