@@ -1,4 +1,4 @@
-# Blog Post Generator
+# Blog Post Generator （json to markdown）
 
 This script automates the process of converting blog post data from a JSON file into individual Markdown files suitable for a Jekyll-based blog. It extracts key information such as the blog post title, content, and date from the JSON file and generates Markdown files in the `markdown_files` directory.
 
