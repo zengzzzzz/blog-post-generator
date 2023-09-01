@@ -25,7 +25,7 @@ for post in data:
     title = title.replace('/', '-')
 
     # Clean HTML tags while retaining line breaks
-    content = re.sub(r'<.*?>', '', content)
+    # content = re.sub(r'<.*?>', '', content)
     content = content.replace('\n', '  \n')  # Markdown line breaks require two trailing spaces
     image_urls = re.findall(r'src="(.*?\.(png|jpg))"', content)  # get img urls
 
@@ -33,9 +33,9 @@ for post in data:
     if image_urls:
         image_count = 1
         for image_url in image_urls:
-            image_name = f"{title}-{image_count}"
+            image_name = f"{title}-{image_count}.{image_url[1]}"
             image_path = os.path.join('imgs', image_name)
-            urllib.request.urlretrieve(image_url, image_path)
+            urllib.request.urlretrieve(image_url[0], image_path)
             image_count += 1
 
     # Generate Markdown content
