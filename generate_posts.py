@@ -5,7 +5,7 @@ from datetime import datetime
 import urllib.request
 
 # Read JSON file
-with open('posts_example.json', 'r', encoding='utf-8') as json_file:
+with open('posts.json', 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
 
 # Create directory if it doesn't exist
@@ -16,7 +16,7 @@ if not os.path.exists('imgs'):
     os.mkdir('imgs')
 
 # Iterate through each blog post
-for post in data:
+for post in sorted(data, key = lambda kv : kv["Id"]):
     title = post['Title']
     content = post['Body']
     date_added = datetime.strptime(post['DateAdded'], '%Y-%m-%dT%H:%M:%S').strftime('%Y-%m-%d %H:%M:%S')
@@ -27,15 +27,15 @@ for post in data:
     # Clean HTML tags while retaining line breaks
     # content = re.sub(r'<.*?>', '', content)
     content = content.replace('\n', '  \n')  # Markdown line breaks require two trailing spaces
-    image_urls = re.findall(r'src="(.*?\.(png|jpg))"', content)  # get img urls
+    image_urls = re.findall(r'img src="(.*?)"', content)  # get img urls
 
     # Generate img
     if image_urls:
         image_count = 1
         for image_url in image_urls:
-            image_name = f"{title}-{image_count}.{image_url[1]}"
+            image_name = f"{date_added[:10]}-{title}-{image_count}.png"
             image_path = os.path.join('imgs', image_name)
-            urllib.request.urlretrieve(image_url[0], image_path)
+            urllib.request.urlretrieve(image_url, image_path)
             image_count += 1
 
     # Generate Markdown content
